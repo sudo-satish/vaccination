@@ -1,0 +1,15 @@
+extends ../layouts/layout
+block content
+   
+    div.container
+        form(method="post", action="login")
+            div.form-group
+                input(type='text', name='email', placeholder='Email', class='form-control')
+            div.form-group
+                input(type='password', name='password', placeholder='Password', class='form-control')
+            div.form-group
+                input(type='submit', value = 'Login').btn.btn-primary
+    if error
+        div.alert.alert-danger(role='alert') #{error}
+    if message
+        div.alert.alert-success(role='alert') #{message}

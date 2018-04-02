@@ -1,0 +1,6 @@
+.disease-link {
+    cursor:pointer;
+}
+.disease-link:hover {
+    background-color: #ececf6;
+}

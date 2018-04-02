@@ -1,0 +1,36 @@
+extends ../layouts/layout
+
+block content    
+    div.container
+        div.container
+            div.row
+                div.col
+                    span #{clientName}
+                div.col  
+                    span #{name}
+                div.col  #{phoneNumber}
+            div.row
+                div.col  #{dob}
+                div.col  #{childName}
+                div.col  #{emailId}
+            div.row
+                div.col  #{days} Days
+                div.col 
+                div.col
+        div.container
+            div.row 
+                div.col 
+                    input.form-control(type="text", value="Current vaccination", disabled)
+                    input.form-control(type="text", placeholder="09-Jan-2018", disabled)
+                div.col
+                    input.form-control(type="text", value="Next vaccine", disabled)
+                    input.form-control(type="text", value="16-Jan-2018", disabled)
+                div.col
+                    input.form-control(type="text", value="Previous vaccine", disabled)
+                    input.form-control(type="text", value="01-Jan-2018", disabled)
+            div.row
+                div.col
+                    button.form-control.btn.btn-success(type="button", onClick="alert('hello world!');") Generate Slip
+
+
+

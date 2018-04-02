@@ -1,0 +1,18 @@
+extends ../layouts/layout
+
+block content
+  div.container
+      form(method='POST', action='/user')
+          div.form-group
+              input(type='text', name='name', placeholder='name', class='form-control')
+          div.form-group
+          input(type='text', name='type', placeholder='Type', class='form-control')
+          div.form-group
+              input(type='submit', value = 'Create new user').btn.btn-primary
+  div.container
+    ul
+      each user in data
+        li(onClick="alert('"+ user._id +"')") #{user._id}
+        li #{user.type}  #{user.name}
+      else
+        li No value

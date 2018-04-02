@@ -1,0 +1,22 @@
+html
+  head
+    title My Site
+    block scripts
+      script(src='/vendor/jquery/dist/jquery.js')
+      //script(src='/vendor/popper/dist/popper.js')
+      script(src='/vendor/bootstrap/dist/js/bootstrap.min.js')
+    block style
+        link(rel='stylesheet', href='/vendor/bootstrap/dist/css/bootstrap.min.css')
+        //link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+        link(rel='stylesheet', href='/src/css/main.css')
+  body
+    header.navbar.navbar-expand.navbar-dark.flex-column.flex-md-row.bd-navbar
+        div.navbar-nav-scroll
+        ul.navbar-nav.flex-row.ml-md-auto.d-none.d-md-flex 
+            if session.user
+                div.alert.alert-success(role='alert') You are login as #{session.user.email} !
+                a.btn.btn-bd-yellow.d-none.d-lg-inline-block.mb-3.mb-md-0.ml-md-3(href='logout') Logout
+    block content
+    block foot
+      #footer
+        p 
